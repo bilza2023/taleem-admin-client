@@ -1,18 +1,35 @@
 {
   "name": "taleem-admin-client",
-  "version": "0.0.1",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Official JavaScript SDK for the Taleem Admin API",
   "type": "module",
+ "main": "./src/main.js",
+
+  "exports": {
+    ".": "./src/main.js"
+  },
+
+  "files": [
+    "src",
+    "README.md"
+  ],
+
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
     "test": "vitest",
     "test:run": "vitest run"
   },
+
+  "keywords": [
+    "taleem",
+    "sdk",
+    "admin",
+    "api"
+  ],
+
+  "license": "MIT",
+
   "devDependencies": {
     "jsdom": "^29.1.1",
-    "vite": "^8.1.1",
     "vitest": "^4.1.10"
   }
 }
