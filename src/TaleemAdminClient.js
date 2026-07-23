@@ -3,11 +3,27 @@
 // --------------------------------------------------
 
 import {Connection} from "./Connection.js";
+import {LibraryService} from "./LibraryService.js";
+import {CourseService} from "./CourseService.js";
+import {CommunicationService} from "./CommunicationService.js";
+import {SubscriptionService} from "./SubscriptionService.js";
 export class TaleemAdminClient {
 
     constructor(serverUrl) {
 
         this.connection = new Connection(serverUrl);
+        this.library = new LibraryService(
+                    this.connection
+                );
+        this.course = new CourseService(
+                    this.connection
+                );
+        this.communication = new CommunicationService(
+                    this.connection
+                );
+        this.subscription = new SubscriptionService(
+                    this.connection
+                );
 
     }
 
